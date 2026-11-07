@@ -1,0 +1,2371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Kshavi Clothing — Gen Z Streetwear | Heavyweight Drops & Essentials</title>
+  <meta name="description" content="Kshavi Clothing — Bold Gen Z streetwear, oversized graphic tees, heavyweight hoodies, cargos, and accessories. Instant WhatsApp checkout across India." />
+  <meta name="keywords" content="Kshavi Clothing, Gen Z streetwear India, oversized t-shirts, heavyweight hoodies, cargo joggers, street fashion" />
+  <meta name="theme-color" content="#FFF8DC" />
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:title" content="Kshavi Clothing — Bold Gen Z Streetwear" />
+  <meta property="og:description" content="New Drop • Limited Stock • Shop oversized tees, hoodies, joggers & accessories." />
+  <meta property="og:type" content="website" />
+
+  <!-- Inline SVG Favicon (Cornsilk & Red) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23FFF8DC'/%3E%3Crect x='4' y='4' width='56' height='56' rx='10' fill='%23E6192E' stroke='%23111111' stroke-width='4'/%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='Arial Black, sans-serif' font-weight='900' font-size='34' fill='%23FFFFFF'%3EK%3C/text%3E%3C/svg%3E" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ==========================================================================
+       1. DESIGN TOKENS (CORNSILK BACKGROUND + STREETWEAR RED ACCENT)
+       ========================================================================== */
+    :root {
+      --bg-base: #FFF8DC;          /* Cornsilk */
+      --bg-surface: #FFFFFF;       /* Crisp White Cards */
+      --bg-elevated: #FDF1C2;      /* Warm Cornsilk Tint */
+      --text-primary: #111115;     /* Deep Ink Black */
+      --text-secondary: #4A4A55;   /* Charcoal Muted */
+      --accent: #E6192E;           /* Bold Streetwear Red (Replaced greenish-yellow) */
+      --accent-dark: #B80F20;      /* Darker Red for active/hover */
+      --ink: #111115;              /* Brutalist Black Borders */
+      --whatsapp: #25D366;
+      --danger: #D90429;
+      --border: #111115;
+      --border-soft: #DFD3A9;
+      --shadow-red: 4px 4px 0px #E6192E;
+      --shadow-ink: 4px 4px 0px #111115;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --font-display: 'Plus Jakarta Sans', sans-serif;
+      --font-sans: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+      --font-mono: 'Space Mono', monospace;
+      --safe-top: env(safe-area-inset-top, 0px);
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+      --safe-left: env(safe-area-inset-left, 0px);
+      --safe-right: env(safe-area-inset-right, 0px);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 100%;
+      overflow-x: hidden;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-primary);
+      font-family: var(--font-sans);
+      line-height: 1.5;
+      overflow-x: hidden;
+      min-height: 100dvh;
+      background-image: radial-gradient(rgba(230, 25, 46, 0.08) 1px, transparent 1px);
+      background-size: 26px 26px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    button, input, select, textarea {
+      font-family: inherit;
+      font-size: 1rem; /* 16px prevents iOS zoom */
+      color: inherit;
+      background: none;
+      border: none;
+    }
+
+    button {
+      cursor: pointer;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.45rem;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1380px;
+      margin: 0 auto;
+      padding-left: calc(0.85rem + var(--safe-left));
+      padding-right: calc(0.85rem + var(--safe-right));
+    }
+
+    /* ==========================================================================
+       2. SCROLLING MARQUEE BAR
+       ========================================================================== */
+    .marquee-bar {
+      background: var(--accent);
+      color: #FFFFFF;
+      border-bottom: 2px solid var(--ink);
+      padding: 0.5rem 0;
+      overflow: hidden;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: clamp(0.72rem, 1.5vw, 0.85rem);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 50;
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee-scroll 22s linear infinite;
+    }
+
+    .marquee-track span {
+      padding: 0 1.25rem;
+      white-space: nowrap;
+    }
+
+    .marquee-track .dot {
+      color: var(--bg-base);
+      font-weight: 900;
+    }
+
+    @keyframes marquee-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ==========================================================================
+       3. STICKY NAVBAR
+       ========================================================================== */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 248, 220, 0.95);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 2px solid var(--ink);
+      padding-top: var(--safe-top);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 4rem;
+      gap: 0.5rem;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.1rem, 3vw, 1.55rem);
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: var(--ink);
+      flex-shrink: 0;
+    }
+
+    .logo-box {
+      background: var(--accent);
+      color: #FFFFFF;
+      padding: 0.15rem 0.55rem;
+      border-radius: 6px;
+      border: 2px solid var(--ink);
+      box-shadow: 2px 2px 0px var(--ink);
+    }
+
+    .nav-links {
+      display: none;
+      align-items: center;
+      gap: 1.75rem;
+    }
+
+    .nav-links a {
+      font-weight: 700;
+      font-size: 0.92rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      padding: 0.5rem 0;
+      color: var(--ink);
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .cart-trigger {
+      background: var(--bg-surface);
+      border: 2px solid var(--ink);
+      color: var(--ink);
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.78rem;
+      box-shadow: 3px 3px 0px var(--accent);
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      white-space: nowrap;
+    }
+
+    .cart-trigger:hover, .cart-trigger:active {
+      transform: translate(-1px, -1px);
+      box-shadow: 4px 4px 0px var(--ink);
+      background: var(--accent);
+      color: #FFFFFF;
+    }
+
+    .cart-badge {
+      background: var(--accent);
+      color: #FFFFFF;
+      font-size: 0.72rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 999px;
+      min-width: 1.35rem;
+      text-align: center;
+      border: 1px solid var(--ink);
+    }
+
+    .cart-trigger:hover .cart-badge {
+      background: var(--ink);
+      color: #FFFFFF;
+    }
+
+    .hamburger-btn {
+      background: var(--bg-surface);
+      border: 2px solid var(--ink);
+      color: var(--ink);
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      font-size: 1.2rem;
+      box-shadow: 2px 2px 0px var(--ink);
+      flex-shrink: 0;
+    }
+
+    /* Mobile Menu Dropdown */
+    .mobile-menu {
+      display: none;
+      background: var(--bg-base);
+      border-bottom: 2px solid var(--ink);
+      padding: 0.85rem;
+    }
+
+    .mobile-menu.open {
+      display: block;
+    }
+
+    .mobile-menu ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .mobile-menu a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.8rem 1rem;
+      background: var(--bg-surface);
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      min-height: 44px;
+      box-shadow: 2px 2px 0px var(--accent);
+    }
+
+    .mobile-menu a:active {
+      background: var(--accent);
+      color: #FFFFFF;
+    }
+
+    /* ==========================================================================
+       4. HERO SECTION (NO OVERLAPPING TEXT ON NARROW SCREENS)
+       ========================================================================== */
+    .hero {
+      padding: clamp(1.75rem, 5vw, 4.5rem) 0;
+      border-bottom: 2px solid var(--ink);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .sticker-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .sticker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      padding: 0.3rem 0.65rem;
+      border-radius: 999px;
+      border: 2px solid var(--ink);
+      white-space: nowrap;
+    }
+
+    .sticker-red {
+      background: var(--accent);
+      color: #FFFFFF;
+      box-shadow: 2px 2px 0px var(--ink);
+    }
+
+    .sticker-dark {
+      background: var(--ink);
+      color: var(--bg-base);
+      box-shadow: 2px 2px 0px var(--accent);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.85rem, 6vw, 4.5rem);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      color: var(--ink);
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    .hero-title .highlight-red {
+      color: var(--accent);
+      text-decoration: underline;
+      text-decoration-thickness: 4px;
+      text-underline-offset: 4px;
+    }
+
+    .hero-title .badge-word {
+      display: inline-block;
+      background: var(--accent);
+      color: #FFFFFF;
+      padding: 0.05rem 0.45rem;
+      border: 2px solid var(--ink);
+      border-radius: 6px;
+      box-shadow: 3px 3px 0px var(--ink);
+      margin-top: 0.15rem;
+    }
+
+    .hero-tagline {
+      font-size: clamp(0.92rem, 2vw, 1.15rem);
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin-bottom: 1.5rem;
+      font-weight: 500;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .btn-primary {
+      background: var(--accent);
+      color: #FFFFFF;
+      border: 2px solid var(--ink);
+      padding: 0.85rem 1.5rem;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      box-shadow: var(--shadow-ink);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 46px;
+      line-height: 1.2;
+    }
+
+    .btn-primary:hover, .btn-primary:active {
+      background: var(--accent-dark);
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px var(--ink);
+    }
+
+    .btn-secondary {
+      background: var(--bg-surface);
+      color: var(--ink);
+      border: 2px solid var(--ink);
+      padding: 0.85rem 1.4rem;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      box-shadow: 4px 4px 0px var(--accent);
+      transition: transform 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 46px;
+    }
+
+    .btn-secondary:hover {
+      transform: translate(-2px, -2px);
+      background: var(--bg-elevated);
+    }
+
+    .hero-visual {
+      position: relative;
+      background: var(--bg-surface);
+      border: 3px solid var(--ink);
+      border-radius: var(--radius-lg);
+      padding: 0.75rem;
+      box-shadow: 6px 6px 0px var(--accent);
+    }
+
+    .hero-img-wrap {
+      aspect-ratio: 4 / 4.4;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      position: relative;
+      background: var(--bg-elevated);
+      border: 2px solid var(--ink);
+    }
+
+    .hero-img-wrap img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .floating-sticker {
+      position: absolute;
+      top: -10px;
+      right: 12px;
+      background: var(--accent);
+      color: #FFFFFF;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.72rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 999px;
+      border: 2px solid var(--ink);
+      box-shadow: 3px 3px 0px var(--ink);
+      transform: rotate(4deg);
+      z-index: 2;
+    }
+
+    /* ==========================================================================
+       5. PRODUCT SECTION & CATEGORY CHIPS
+       ========================================================================== */
+    .section {
+      padding: clamp(2.5rem, 6vw, 4.5rem) 0;
+    }
+
+    .section-head {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-eyebrow {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.78rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(1.5rem, 4vw, 2.75rem);
+      text-transform: uppercase;
+      line-height: 1.12;
+      color: var(--ink);
+      overflow-wrap: break-word;
+      word-break: break-word;
+    }
+
+    /* Filter Chips */
+    .filter-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .chip {
+      background: var(--bg-surface);
+      color: var(--ink);
+      border: 2px solid var(--ink);
+      padding: 0.45rem 0.95rem;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      transition: all 0.15s ease;
+      min-height: 40px;
+    }
+
+    .chip:hover {
+      background: var(--bg-elevated);
+    }
+
+    .chip.active {
+      background: var(--accent);
+      color: #FFFFFF;
+      border-color: var(--ink);
+      box-shadow: 3px 3px 0px var(--ink);
+    }
+
+    /* Product Grid: 2 cols mobile, 3 tablet, 4 desktop */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(0.65rem, 2vw, 1.4rem);
+    }
+
+    .product-card {
+      background: var(--bg-surface);
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 3px 3px 0px var(--ink);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 5px 5px 0px var(--accent);
+    }
+
+    .card-media {
+      position: relative;
+      aspect-ratio: 3 / 3.7;
+      background: var(--bg-elevated);
+      overflow: hidden;
+      cursor: pointer;
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .card-media img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.35s ease;
+    }
+
+    .product-card:hover .card-media img {
+      transform: scale(1.05);
+    }
+
+    .tag-badge {
+      position: absolute;
+      top: 0.45rem;
+      left: 0.45rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      padding: 0.18rem 0.5rem;
+      border-radius: 5px;
+      border: 1.5px solid var(--ink);
+      z-index: 2;
+    }
+
+    .tag-new {
+      background: var(--accent);
+      color: #FFFFFF;
+    }
+
+    .tag-sale {
+      background: var(--ink);
+      color: var(--bg-base);
+    }
+
+    .quickview-pill {
+      position: absolute;
+      bottom: 0.45rem;
+      right: 0.45rem;
+      background: rgba(255, 248, 220, 0.94);
+      color: var(--ink);
+      border: 1.5px solid var(--ink);
+      border-radius: 999px;
+      padding: 0.2rem 0.55rem;
+      font-family: var(--font-mono);
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    .card-body {
+      padding: clamp(0.55rem, 1.8vw, 0.95rem);
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      flex: 1;
+    }
+
+    .card-category {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+    }
+
+    .card-title {
+      font-weight: 700;
+      font-size: clamp(0.82rem, 1.8vw, 1rem);
+      line-height: 1.25;
+      color: var(--ink);
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .card-price-row {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+      margin-top: auto;
+      padding-top: 0.25rem;
+    }
+
+    .price-current {
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: clamp(0.88rem, 2vw, 1.1rem);
+      color: var(--accent);
+    }
+
+    .price-old {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--text-secondary);
+      text-decoration: line-through;
+    }
+
+    .card-actions {
+      padding: 0 clamp(0.55rem, 1.8vw, 0.95rem) clamp(0.55rem, 1.8vw, 0.95rem);
+    }
+
+    .btn-card-add {
+      width: 100%;
+      background: var(--bg-base);
+      color: var(--ink);
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-sm);
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: clamp(0.68rem, 1.4vw, 0.8rem);
+      text-transform: uppercase;
+      padding: 0.45rem 0.35rem;
+      min-height: 40px;
+      transition: background 0.15s ease, color 0.15s ease;
+    }
+
+    .btn-card-add:hover, .btn-card-add:active {
+      background: var(--accent);
+      color: #FFFFFF;
+    }
+
+    /* ==========================================================================
+       6. ABOUT SECTION & INSTAGRAM GALLERY STRIP
+       ========================================================================== */
+    .about-section {
+      background: var(--bg-elevated);
+      border-top: 2px solid var(--ink);
+      border-bottom: 2px solid var(--ink);
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 2.5rem;
+    }
+
+    .about-card {
+      background: var(--bg-surface);
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-md);
+      padding: clamp(1.25rem, 3vw, 2rem);
+      box-shadow: var(--shadow-red);
+    }
+
+    .about-perks {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+      gap: 0.75rem;
+      margin-top: 1.25rem;
+    }
+
+    .perk-item {
+      background: var(--bg-surface);
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-sm);
+      padding: 0.85rem;
+      box-shadow: 2px 2px 0px var(--ink);
+    }
+
+    .perk-item strong {
+      display: block;
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    .perk-item span {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+    }
+
+    /* Instagram Strip */
+    .ig-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .ig-strip {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+
+    .ig-item {
+      position: relative;
+      aspect-ratio: 1 / 1;
+      border-radius: var(--radius-sm);
+      overflow: hidden;
+      border: 2px solid var(--ink);
+      box-shadow: 3px 3px 0px var(--ink);
+    }
+
+    .ig-item img {
+      width: 100%;
+      height: 100%;
+      transition: transform 0.3s ease;
+    }
+
+    .ig-item:hover img {
+      transform: scale(1.06);
+    }
+
+    .ig-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(17, 17, 21, 0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.2s ease;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #FFFFFF;
+    }
+
+    .ig-item:hover .ig-overlay {
+      opacity: 1;
+    }
+
+    /* ==========================================================================
+       7. CONTACT SECTION (FIXED TEXT & BUTTON CLIPPING)
+       ========================================================================== */
+    .contact-box {
+      background: var(--bg-surface);
+      border: 3px solid var(--ink);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.25rem, 3.5vw, 2.75rem);
+      box-shadow: 6px 6px 0px var(--accent);
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+      align-items: center;
+    }
+
+    .contact-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .contact-tile {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      background: var(--bg-base);
+      border: 2px solid var(--ink);
+      padding: 0.85rem 1rem;
+      border-radius: var(--radius-md);
+      box-shadow: 3px 3px 0px var(--ink);
+      transition: transform 0.15s ease;
+      min-width: 0;
+    }
+
+    .contact-tile:hover {
+      transform: translate(-2px, -2px);
+    }
+
+    .tile-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #FFFFFF;
+      border: 2px solid var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 1.1rem;
+    }
+
+    .tile-text {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .tile-text strong {
+      display: block;
+      font-size: clamp(0.85rem, 2vw, 1rem);
+      color: var(--ink);
+      overflow-wrap: anywhere;
+    }
+
+    .whatsapp-support-card {
+      background: var(--bg-elevated);
+      padding: clamp(1.25rem, 3vw, 1.75rem);
+      border-radius: var(--radius-md);
+      border: 2px solid var(--ink);
+      text-align: center;
+      box-shadow: 4px 4px 0px var(--ink);
+    }
+
+    .btn-whatsapp-large {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: var(--whatsapp);
+      color: #0B0B0E;
+      border: 2px solid var(--ink);
+      padding: 0.9rem 1.25rem;
+      border-radius: var(--radius-sm);
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: clamp(0.88rem, 2vw, 1rem);
+      line-height: 1.25;
+      text-transform: uppercase;
+      box-shadow: 4px 4px 0px var(--ink);
+      width: 100%;
+      min-height: 48px;
+      white-space: normal;
+      text-align: center;
+      transition: transform 0.15s ease;
+    }
+
+    .btn-whatsapp-large:hover, .btn-whatsapp-large:active {
+      transform: translate(-2px, -2px);
+    }
+
+    /* ==========================================================================
+       8. FOOTER & FLOATING WHATSAPP (CLEARANCE ADDED SO NO OVERLAP)
+       ========================================================================== */
+    .footer {
+      background: var(--ink);
+      color: var(--bg-base);
+      border-top: 3px solid var(--accent);
+      /* Extra bottom padding prevents Floating WhatsApp button from overlapping credit line */
+      padding: 3rem 0 calc(5.5rem + var(--safe-bottom));
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.75rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(255, 248, 220, 0.2);
+    }
+
+    .social-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .social-pill {
+      background: rgba(255, 248, 220, 0.1);
+      border: 1.5px solid var(--bg-base);
+      color: var(--bg-base);
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      min-height: 40px;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .social-pill:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #FFFFFF;
+    }
+
+    .footer-bottom {
+      padding-top: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.65rem;
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: rgba(255, 248, 220, 0.8);
+    }
+
+    .credit-line {
+      color: #FFFFFF;
+      font-weight: 700;
+    }
+
+    .credit-line .heart {
+      color: var(--accent);
+      display: inline-block;
+    }
+
+    /* Floating WhatsApp Button */
+    .floating-wa {
+      position: fixed;
+      right: calc(0.85rem + var(--safe-right));
+      bottom: calc(0.85rem + var(--safe-bottom));
+      z-index: 90;
+      background: var(--whatsapp);
+      color: #0B0B0E;
+      border: 2px solid var(--ink);
+      border-radius: 999px;
+      padding: 0.65rem 1.05rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.8rem;
+      box-shadow: 3px 3px 0px var(--ink);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      min-height: 44px;
+    }
+
+    /* ==========================================================================
+       9. MODALS & SLIDE-IN CART DRAWER
+       ========================================================================== */
+    .backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(17, 17, 21, 0.72);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      z-index: 200;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .backdrop.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    /* Slide-in Cart Drawer */
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100dvh;
+      background: var(--bg-base);
+      border-left: 3px solid var(--ink);
+      z-index: 210;
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      padding-top: var(--safe-top);
+      padding-bottom: var(--safe-bottom);
+    }
+
+    .cart-drawer.open {
+      transform: translateX(0);
+    }
+
+    .drawer-header {
+      padding: 1rem 1.15rem;
+      background: var(--bg-surface);
+      border-bottom: 2px solid var(--ink);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .drawer-title {
+      font-family: var(--font-display);
+      font-weight: 800;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    .icon-close-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-sm);
+      background: var(--bg-elevated);
+      border: 2px solid var(--ink);
+      color: var(--ink);
+      font-family: var(--font-mono);
+      font-weight: 700;
+    }
+
+    .drawer-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .cart-item {
+      display: grid;
+      grid-template-columns: 68px 1fr;
+      gap: 0.75rem;
+      background: var(--bg-surface);
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-sm);
+      padding: 0.65rem;
+      align-items: center;
+      box-shadow: 3px 3px 0px var(--ink);
+    }
+
+    .cart-item img {
+      width: 68px;
+      height: 84px;
+      border-radius: 6px;
+      border: 1.5px solid var(--ink);
+    }
+
+    .cart-item-meta h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      margin-bottom: 0.15rem;
+      color: var(--ink);
+    }
+
+    .cart-item-size {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 700;
+      margin-bottom: 0.45rem;
+    }
+
+    .cart-controls-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .qty-box {
+      display: inline-flex;
+      align-items: center;
+      border: 1.5px solid var(--ink);
+      border-radius: 6px;
+      background: var(--bg-base);
+    }
+
+    .qty-btn {
+      width: 34px;
+      min-height: 34px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+    }
+
+    .qty-val {
+      padding: 0 0.5rem;
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      font-weight: 700;
+    }
+
+    .remove-btn {
+      color: var(--danger);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-decoration: underline;
+      min-height: 34px;
+      padding: 0 0.3rem;
+    }
+
+    .drawer-footer {
+      padding: 1.15rem;
+      border-top: 2px solid var(--ink);
+      background: var(--bg-surface);
+    }
+
+    .subtotal-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-family: var(--font-mono);
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+    }
+
+    /* Quick View & Checkout Modals */
+    .modal-wrap {
+      position: fixed;
+      inset: 0;
+      z-index: 220;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+    }
+
+    .modal-wrap.open {
+      display: flex;
+    }
+
+    .modal-card {
+      background: var(--bg-base);
+      width: 100%;
+      height: 100dvh;
+      max-height: 100dvh;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      padding-top: var(--safe-top);
+      padding-bottom: var(--safe-bottom);
+    }
+
+    .qv-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+      padding: 1.15rem;
+    }
+
+    .qv-img {
+      aspect-ratio: 3 / 3.5;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 2px solid var(--ink);
+      background: var(--bg-surface);
+    }
+
+    .qv-img img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .size-selector {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.65rem 0 1.25rem;
+    }
+
+    .size-btn {
+      min-width: 46px;
+      min-height: 44px;
+      padding: 0 0.8rem;
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-sm);
+      background: var(--bg-surface);
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.88rem;
+    }
+
+    .size-btn.selected {
+      background: var(--accent);
+      color: #FFFFFF;
+      border-color: var(--ink);
+      box-shadow: 3px 3px 0px var(--ink);
+    }
+
+    /* Checkout Form Styling */
+    .checkout-body {
+      padding: 1.15rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-label {
+      display: block;
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+      color: var(--ink);
+    }
+
+    .form-input {
+      width: 100%;
+      background: var(--bg-surface);
+      border: 2px solid var(--ink);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 0.9rem;
+      color: var(--ink);
+      font-size: 1rem;
+      min-height: 46px;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 3px 3px 0px var(--accent);
+    }
+
+    .form-input.invalid {
+      border-color: var(--danger);
+    }
+
+    .error-msg {
+      color: var(--danger);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      margin-top: 0.25rem;
+      display: none;
+    }
+
+    .error-msg.visible {
+      display: block;
+    }
+
+    .checkout-item-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.65rem;
+      background: var(--bg-surface);
+      border: 2px solid var(--ink);
+      padding: 0.65rem;
+      border-radius: var(--radius-sm);
+      margin-bottom: 0.55rem;
+      flex-wrap: wrap;
+    }
+
+    .checkout-size-select {
+      background: var(--bg-elevated);
+      border: 2px solid var(--ink);
+      color: var(--ink);
+      border-radius: 6px;
+      padding: 0.3rem 0.55rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 1rem;
+      min-height: 40px;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: calc(4.75rem + var(--safe-bottom));
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--accent);
+      color: #FFFFFF;
+      border: 2px solid var(--ink);
+      box-shadow: 4px 4px 0px var(--ink);
+      padding: 0.65rem 1.2rem;
+      border-radius: 999px;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      font-size: 0.8rem;
+      z-index: 300;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      white-space: nowrap;
+      max-width: 92vw;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
+    /* ==========================================================================
+       10. MEDIA QUERIES (480px, 768px, 1024px, 1440px)
+       ========================================================================== */
+    @media (min-width: 480px) {
+      .container {
+        padding-left: calc(1.25rem + var(--safe-left));
+        padding-right: calc(1.25rem + var(--safe-right));
+      }
+    }
+
+    @media (min-width: 768px) {
+      .nav-links {
+        display: flex;
+      }
+      .hamburger-btn {
+        display: none;
+      }
+      .mobile-menu {
+        display: none !important;
+      }
+      /* 3 columns on Tablet */
+      .product-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .ig-strip {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .cart-drawer {
+        width: 420px;
+      }
+      .modal-wrap {
+        padding: 1.5rem;
+      }
+      .modal-card {
+        height: auto;
+        max-height: 90dvh;
+        max-width: 820px;
+        border: 3px solid var(--ink);
+        border-radius: var(--radius-lg);
+        box-shadow: 8px 8px 0px var(--ink);
+      }
+      .qv-grid {
+        grid-template-columns: 1fr 1.1fr;
+        align-items: center;
+      }
+      .checkout-body {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+      .contact-box {
+        grid-template-columns: 1.2fr 0.8fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1.5fr 1fr 1fr;
+      }
+      .footer-bottom {
+        flex-direction: row;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1.15fr 0.85fr;
+      }
+      /* 4 columns on Desktop */
+      .product-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+      .about-grid {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+    }
+
+    @media (min-width: 1440px) {
+      .container {
+        max-width: 1380px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP SCROLLING MARQUEE -->
+  <div class="marquee-bar" aria-label="Promotional Announcements">
+    <div class="marquee-track">
+      <span>NEW DROP <b class="dot">•</b> LIMITED STOCK <b class="dot">•</b> KSHAVI</span>
+      <span>HEAVYWEIGHT 260 GSM COTTON <b class="dot">•</b> INSTANT WHATSAPP CHECKOUT</span>
+      <span>NEW DROP <b class="dot">•</b> LIMITED STOCK <b class="dot">•</b> KSHAVI</span>
+      <span>FREE SHIPPING ON PREPAID ORDERS <b class="dot">•</b> NO RESTOCKS</span>
+      <!-- Duplicate for seamless infinite loop -->
+      <span>NEW DROP <b class="dot">•</b> LIMITED STOCK <b class="dot">•</b> KSHAVI</span>
+      <span>HEAVYWEIGHT 260 GSM COTTON <b class="dot">•</b> INSTANT WHATSAPP CHECKOUT</span>
+      <span>NEW DROP <b class="dot">•</b> LIMITED STOCK <b class="dot">•</b> KSHAVI</span>
+      <span>FREE SHIPPING ON PREPAID ORDERS <b class="dot">•</b> NO RESTOCKS</span>
+    </div>
+  </div>
+
+  <!-- 1. STICKY NAVBAR -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="logo" aria-label="Kshavi Clothing Home">
+        <span class="logo-box">K</span>
+        <span>KSHAVI</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="#shop">Shop</a>
+        <a href="#new-drops" onclick="filterByNav('NEW')">New Drops</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="cart-trigger" id="openCartBtn" aria-label="Open shopping cart">
+          <span>🛒 BAG</span>
+          <span class="cart-badge" id="cartCountBadge">0</span>
+        </button>
+        <button type="button" class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle Menu" aria-expanded="false">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile Navigation">
+      <ul>
+        <li><a href="#shop" class="mobile-link"><span>Shop Catalog</span><span>→</span></a></li>
+        <li><a href="#shop" class="mobile-link" onclick="filterByNav('NEW')"><span>New Drops 🔥</span><span>→</span></a></li>
+        <li><a href="#about" class="mobile-link"><span>About Kshavi</span><span>→</span></a></li>
+        <li><a href="#contact" class="mobile-link"><span>Contact Us</span><span>→</span></a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- 2. HERO SECTION -->
+    <section class="hero" id="new-drops">
+      <div class="container hero-grid">
+        <div>
+          <div class="sticker-row">
+            <span class="sticker sticker-red">⚡ SEASON 01 ARCHIVE</span>
+            <span class="sticker sticker-dark">🔥 LIMITED EDITION</span>
+          </div>
+
+          <h1 class="hero-title">
+            LOUD FITS FOR <span class="highlight-red">UNFILTERED</span> <span class="badge-word">STREETS.</span>
+          </h1>
+
+          <p class="hero-tagline">
+            Engineered in 260–430 GSM heavyweight Indian cotton. Boxy drop-shoulder silhouettes, 3D puff graphics, and tactical utility wear built for main character energy.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#shop" class="btn-primary">Shop Now ↓</a>
+            <a href="#about" class="btn-secondary">Explore The Vibe</a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <span class="floating-sticker">★ DROP 01 LIVE</span>
+          <div class="hero-img-wrap">
+            <img 
+              src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8?auto=format&fit=crop&w=900&q=80" 
+              alt="Kshavi Clothing Streetwear Model" 
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. PRODUCT GRID WITH CATEGORY FILTER CHIPS -->
+    <section class="section" id="shop">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-eyebrow">// DROP 01 COLLECTION</span>
+          <h2 class="section-title">FRESH STREETWEAR DROPS</h2>
+        </div>
+
+        <!-- Category Filter Chips -->
+        <div class="filter-chips" id="filterContainer" role="tablist" aria-label="Product Categories">
+          <button type="button" class="chip active" data-category="All">All Drops</button>
+          <button type="button" class="chip" data-category="T-Shirts">T-Shirts</button>
+          <button type="button" class="chip" data-category="Hoodies">Hoodies</button>
+          <button type="button" class="chip" data-category="Joggers">Joggers</button>
+          <button type="button" class="chip" data-category="Accessories">Accessories</button>
+        </div>
+
+        <!-- Dynamic Product Grid -->
+        <div class="product-grid" id="productGrid"></div>
+      </div>
+    </section>
+
+    <!-- 5. ABOUT SECTION + INSTAGRAM GALLERY STRIP -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <span class="section-eyebrow">// WHO WE ARE</span>
+            <h2 class="section-title" style="margin-bottom: 0.85rem;">BORN FOR THE UNDERGROUND CULTURE.</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 0.85rem;">
+              Kshavi Clothing started with a simple obsession: creating heavyweight, unapologetic streetwear that doesn't lose its boxy shape after one wash. Every drop is produced in limited batches with high-density puff inks, acid washes, and custom technical fabrics.
+            </p>
+            <p style="color: var(--text-secondary);">
+              No middlemen, no complicated checkout hoops—pick your size and lock your order directly with our studio on WhatsApp.
+            </p>
+
+            <div class="about-perks">
+              <div class="perk-item">
+                <strong>260+ GSM</strong>
+                <span>Heavy Combed Cotton</span>
+              </div>
+              <div class="perk-item">
+                <strong>BOX FIT</strong>
+                <span>Drop-Shoulder Cut</span>
+              </div>
+              <div class="perk-item">
+                <strong>24 HR</strong>
+                <span>Fast Pan-India Dispatch</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card">
+            <span class="sticker sticker-red" style="margin-bottom: 0.85rem;">💯 KSHAVI PROMISE</span>
+            <h3 style="font-family: var(--font-display); font-weight: 800; font-size: clamp(1.25rem, 3vw, 1.55rem); margin-bottom: 0.65rem; text-transform: uppercase;">
+              ZERO FAST-FASHION COMPROMISE
+            </h3>
+            <p style="color: var(--text-secondary); font-size: 0.92rem; margin-bottom: 1.25rem;">
+              Our garments are pre-shrunk, enzyme-washed, and finished with anti-sag ribbed collars. Designed in India for creators, skaters, and late-night hustlers.
+            </p>
+            <a href="#shop" class="btn-primary" style="width: 100%;">Browse All Pieces</a>
+          </div>
+        </div>
+
+        <!-- Instagram-Style Gallery Strip -->
+        <div>
+          <div class="ig-header">
+            <h3 style="font-family: var(--font-display); font-weight: 800; font-size: clamp(1.15rem, 2.5vw, 1.4rem); text-transform: uppercase;">
+              📸 SPOTTED IN #KSHAVICLOTHING
+            </h3>
+            <span style="font-family: var(--font-mono); font-weight: 700; font-size: 0.8rem; color: var(--accent);">@KSHAVI.CLOTHING</span>
+          </div>
+
+          <div class="ig-strip">
+            <div class="ig-item">
+              <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80" alt="Kshavi Lookbook 1" loading="lazy" />
+              <div class="ig-overlay">🔥 @kshavi.clothing</div>
+            </div>
+            <div class="ig-item">
+              <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80" alt="Kshavi Lookbook 2" loading="lazy" />
+              <div class="ig-overlay">⚡ @kshavi.clothing</div>
+            </div>
+            <div class="ig-item">
+              <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80" alt="Kshavi Lookbook 3" loading="lazy" />
+              <div class="ig-overlay">🖤 @kshavi.clothing</div>
+            </div>
+            <div class="ig-item">
+              <img src="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=600&q=80" alt="Kshavi Lookbook 4" loading="lazy" />
+              <div class="ig-overlay">✨ @kshavi.clothing</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. CONTACT SECTION -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <span class="section-eyebrow">// HIT US UP</span>
+            <h2 class="section-title" style="margin-bottom: 0.65rem;">GOT SIZING QUESTIONS OR BULK ORDERS?</h2>
+            <p style="color: var(--text-secondary); margin-bottom: 1.25rem; font-size: 0.95rem;">
+              Reach out directly to the Kshavi support desk for size assistance, order tracking, or college fest bulk merch.
+            </p>
+
+            <div class="contact-links">
+              <a href="tel:+919824160664" class="contact-tile">
+                <span class="tile-icon">📞</span>
+                <div class="tile-text">
+                  <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary);">TAP TO CALL</div>
+                  <strong>+91 98241 60664</strong>
+                </div>
+              </a>
+
+              <a href="mailto:havytechnologies@gmail.com" class="contact-tile">
+                <span class="tile-icon">✉️</span>
+                <div class="tile-text">
+                  <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--text-secondary);">OFFICIAL EMAIL</div>
+                  <strong>havytechnologies@gmail.com</strong>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="whatsapp-support-card">
+            <div style="font-size: 2.25rem; margin-bottom: 0.4rem;">💬</div>
+            <h3 style="font-family: var(--font-display); font-weight: 800; font-size: clamp(1.15rem, 2.5vw, 1.35rem); text-transform: uppercase; margin-bottom: 0.45rem;">
+              INSTANT WHATSAPP SUPPORT
+            </h3>
+            <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1.25rem;">
+              Chat directly with our team for instant replies on sizes, stock, and custom drops.
+            </p>
+            <a 
+              href="https://wa.me/919824160664?text=Hey%20Kshavi%20Clothing!%20I%20have%20a%20question%20about%20your%20latest%20drop." 
+              target="_blank" 
+              rel="noopener" 
+              class="btn-whatsapp-large">
+              <span>Chat on WhatsApp</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- 7. FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="#" class="logo" style="color: #FFFFFF; margin-bottom: 0.75rem;">
+            <span class="logo-box">K</span>
+            <span>KSHAVI CLOTHING</span>
+          </a>
+          <p style="color: rgba(255, 248, 220, 0.8); font-size: 0.9rem; max-width: 340px;">
+            Bold Gen Z streetwear engineered for everyday statement fits. Heavyweight fabrics, limited drops, direct WhatsApp ordering.
+          </p>
+          <div class="social-row">
+            <a href="https://wa.me/919824160664" target="_blank" rel="noopener" class="social-pill">Instagram</a>
+            <a href="https://wa.me/919824160664" target="_blank" rel="noopener" class="social-pill">YouTube</a>
+            <a href="https://wa.me/919824160664" target="_blank" rel="noopener" class="social-pill">WhatsApp</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent); text-transform: uppercase; margin-bottom: 0.75rem;">Quick Links</h4>
+          <ul style="display: flex; flex-direction: column; gap: 0.5rem; color: rgba(255, 248, 220, 0.85); font-size: 0.9rem;">
+            <li><a href="#shop">Shop All</a></li>
+            <li><a href="#new-drops" onclick="filterByNav('NEW')">New Drops</a></li>
+            <li><a href="#about">About Brand</a></li>
+            <li><a href="#contact">Contact Support</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent); text-transform: uppercase; margin-bottom: 0.75rem;">Contact Info</h4>
+          <ul style="display: flex; flex-direction: column; gap: 0.55rem; color: rgba(255, 248, 220, 0.85); font-size: 0.9rem;">
+            <li>Phone: <a href="tel:+919824160664" style="color: #FFFFFF; font-weight: 700;">+91 98241 60664</a></li>
+            <li>Email: <a href="mailto:havytechnologies@gmail.com" style="color: #FFFFFF; font-weight: 700; word-break: break-all;">havytechnologies@gmail.com</a></li>
+            <li>WhatsApp: <a href="https://wa.me/919824160664" target="_blank" rel="noopener" style="color: var(--accent); font-weight: 700;">+91 98241 60664</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="yearSpan"></span> Kshavi Clothing. All rights reserved.</p>
+        <p class="credit-line">Crafted with <span class="heart">❤</span> by Team Havy</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 8. FLOATING WHATSAPP BUTTON -->
+  <a 
+    href="https://wa.me/919824160664" 
+    target="_blank" 
+    rel="noopener" 
+    class="floating-wa" 
+    aria-label="Chat on WhatsApp">
+    <span>💬 WhatsApp</span>
+  </a>
+
+  <!-- SHARED BACKDROP -->
+  <div class="backdrop" id="globalBackdrop"></div>
+
+  <!-- SLIDE-IN CART DRAWER -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    <div class="drawer-header">
+      <h3 class="drawer-title">🛍️ YOUR DRIP BAG</h3>
+      <button type="button" class="icon-close-btn" id="closeCartBtn" aria-label="Close Cart">✕</button>
+    </div>
+
+    <div class="drawer-body" id="cartItemsContainer"></div>
+
+    <div class="drawer-footer">
+      <div class="subtotal-row">
+        <span>SUBTOTAL</span>
+        <span id="cartSubtotalText" style="color: var(--accent);">₹0</span>
+      </div>
+      <button type="button" class="btn-primary" id="proceedCheckoutBtn" style="width: 100%;">
+        Proceed to Checkout →
+      </button>
+    </div>
+  </aside>
+
+  <!-- 4. PRODUCT QUICK-VIEW MODAL -->
+  <div class="modal-wrap" id="quickViewModal" role="dialog" aria-modal="true" aria-labelledby="qvTitle">
+    <div class="modal-card">
+      <div class="drawer-header">
+        <span style="font-family: var(--font-mono); font-weight: 700; font-size: 0.8rem; color: var(--accent);" id="qvCategory">// QUICK VIEW</span>
+        <button type="button" class="icon-close-btn" id="closeQvBtn" aria-label="Close Quick View">✕</button>
+      </div>
+      <div class="qv-grid" id="qvBody"></div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal-wrap" id="checkoutModal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+    <div class="modal-card">
+      <div class="drawer-header">
+        <h3 class="drawer-title" id="checkoutTitle">⚡ WHATSAPP CHECKOUT</h3>
+        <button type="button" class="icon-close-btn" id="closeCheckoutBtn" aria-label="Close Checkout">✕</button>
+      </div>
+
+      <form id="checkoutForm" class="checkout-body" novalidate>
+        <!-- Left: Customer Shipping Info -->
+        <div>
+          <h4 style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent); text-transform: uppercase; margin-bottom: 0.85rem;">
+            1. Delivery Details
+          </h4>
+
+          <div class="form-group">
+            <label class="form-label" for="custName">Full Name *</label>
+            <input type="text" id="custName" class="form-input" placeholder="e.g. Aarav Mehta" required />
+            <p class="error-msg" id="errName">Please enter your full name.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="custPhone">Phone Number (10 Digits) *</label>
+            <input type="tel" id="custPhone" class="form-input" placeholder="e.g. 9876543210" inputmode="numeric" maxlength="10" required />
+            <p class="error-msg" id="errPhone">Please enter a valid 10-digit mobile number.</p>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="custAddress">Complete Address (with Pincode) *</label>
+            <textarea id="custAddress" class="form-input" rows="3" placeholder="Flat/House No, Street, Area, City, State - 395007" required></textarea>
+            <p class="error-msg" id="errAddress">Please enter your full address including pincode.</p>
+          </div>
+        </div>
+
+        <!-- Right: Editable Item Sizes & Order Summary -->
+        <div>
+          <h4 style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent); text-transform: uppercase; margin-bottom: 0.85rem;">
+            2. Confirm Sizes & Order Summary
+          </h4>
+
+          <div id="checkoutItemsList" style="margin-bottom: 1rem; max-height: 240px; overflow-y: auto;"></div>
+
+          <div style="background: var(--bg-surface); border: 2px solid var(--ink); border-radius: var(--radius-sm); padding: 0.9rem; margin-bottom: 1.15rem;">
+            <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 0.35rem;">
+              <span>Shipping</span>
+              <span style="color: var(--accent); font-weight: 700;">FREE</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 1.1rem; font-weight: 700;">
+              <span>Total</span>
+              <span id="checkoutTotalAmount" style="color: var(--accent);">₹0</span>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-whatsapp-large">
+            <span>🚀 Place Order on WhatsApp</span>
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ORDER SENT CONFIRMATION MODAL -->
+  <div class="modal-wrap" id="confirmationModal" role="dialog" aria-modal="true">
+    <div class="modal-card" style="max-width: 440px; text-align: center; padding: 2.25rem 1.35rem; height: auto;">
+      <div style="font-size: 3.25rem; margin-bottom: 0.6rem;">🎉</div>
+      <h3 class="drawer-title" style="color: var(--accent); margin-bottom: 0.5rem;">ORDER SENT!</h3>
+      <p style="color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.92rem;">
+        Your order details have been generated and redirected to WhatsApp (+91 98241 60664). Send the message in WhatsApp to lock your drop!
+      </p>
+      <button type="button" class="btn-primary" id="closeConfirmBtn" style="width: 100%;">
+        Continue Shopping
+      </button>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast" id="toast" role="status" aria-live="polite">Added to cart!</div>
+
+  <!-- ==========================================================================
+       VANILLA JAVASCRIPT
+       ========================================================================== -->
+  <script>
+    // Single WhatsApp constant at top of script
+    const WHATSAPP_NUMBER = "919824160664";
+
+    // Easy-to-edit Product Catalog
+    const PRODUCTS = [
+      {
+        id: "ksh-1",
+        name: "Acid Wash Cyber Graphic Tee",
+        category: "T-Shirts",
+        price: 999,
+        oldPrice: 1499,
+        tag: "NEW",
+        image: "https://images.unsplash.com/photo-1576566588028-4147f3842f27?auto=format&fit=crop&w=700&q=80",
+        description: "260 GSM heavyweight combed cotton oversized tee with vintage charcoal enzyme wash and 3D puff back print."
+      },
+      {
+        id: "ksh-2",
+        name: "Crimson Strike Puff Print Tee",
+        category: "T-Shirts",
+        price: 899,
+        oldPrice: 1299,
+        tag: "SALE",
+        image: "https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?auto=format&fit=crop&w=700&q=80",
+        description: "Boxy drop-shoulder silhouette with high-density street red graphics and anti-sag ribbed crew neck."
+      },
+      {
+        id: "ksh-3",
+        name: "Tokyo Drift Oversized Tee",
+        category: "T-Shirts",
+        price: 1049,
+        oldPrice: 1499,
+        tag: "NEW",
+        image: "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=700&q=80",
+        description: "Underground street-racing artwork screen-printed on breathable 250 GSM jet-black cotton."
+      },
+      {
+        id: "ksh-4",
+        name: "Void Black 430 GSM Heavy Hoodie",
+        category: "Hoodies",
+        price: 1899,
+        oldPrice: 2599,
+        tag: "NEW",
+        image: "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=700&q=80",
+        description: "Ultra-heavyweight 430 GSM brushed fleece hoodie with double-lined hood, kangaroo pocket, and drop shoulders."
+      },
+      {
+        id: "ksh-5",
+        name: "Distressed Archive Zip-Up Hoodie",
+        category: "Hoodies",
+        price: 1999,
+        oldPrice: 2799,
+        tag: "SALE",
+        image: "https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?auto=format&fit=crop&w=700&q=80",
+        description: "Washed slate grey zip hoodie featuring distressed seam detailing, metallic two-way zip, and gothic embroidery."
+      },
+      {
+        id: "ksh-6",
+        name: "Red Sigil Oversized Sweatshirt",
+        category: "Hoodies",
+        price: 1599,
+        oldPrice: 2199,
+        tag: "NEW",
+        image: "https://images.unsplash.com/photo-1578681994506-b8f463449011?auto=format&fit=crop&w=700&q=80",
+        description: "Cozy loopknit French terry crewneck sweatshirt with bold cyber sigil embroidery across the chest."
+      },
+      {
+        id: "ksh-7",
+        name: "8-Pocket Tactical Parachute Joggers",
+        category: "Joggers",
+        price: 1699,
+        oldPrice: 2299,
+        tag: "NEW",
+        image: "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=700&q=80",
+        description: "Wide-leg ripstop cargo joggers with adjustable ankle bungee toggles and 8 deep utility pockets."
+      },
+      {
+        id: "ksh-8",
+        name: "Heavy Fleece Baggy Street Joggers",
+        category: "Joggers",
+        price: 1399,
+        oldPrice: 1899,
+        tag: "SALE",
+        image: "https://images.unsplash.com/photo-1517445312882-bc9910d016b7?auto=format&fit=crop&w=700&q=80",
+        description: "Relaxed straight-leg uncuffed sweatpants crafted in 380 GSM cotton fleece with puff logo badge."
+      },
+      {
+        id: "ksh-9",
+        name: "Kshavi Distressed Street Beanie",
+        category: "Accessories",
+        price: 599,
+        oldPrice: 899,
+        tag: "NEW",
+        image: "https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?auto=format&fit=crop&w=700&q=80",
+        description: "Rib-knit fisherman beanie with woven Kshavi archive label and distressed edge finish."
+      },
+      {
+        id: "ksh-10",
+        name: "Tactical Crossbody Utility Bag",
+        category: "Accessories",
+        price: 1199,
+        oldPrice: 1699,
+        tag: "SALE",
+        image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=700&q=80",
+        description: "Water-resistant ballistic nylon sling bag with quick-release buckle and reflective paracord zippers."
+      }
+    ];
+
+    const SIZES = ["S", "M", "L", "XL", "XXL"];
+
+    // State
+    let cart = JSON.parse(localStorage.getItem("kshavi_cart_v1") || "[]");
+    let activeCategory = "All";
+    let qvSelectedSize = "L";
+
+    // DOM References
+    const productGrid = document.getElementById("productGrid");
+    const cartCountBadge = document.getElementById("cartCountBadge");
+    const cartItemsContainer = document.getElementById("cartItemsContainer");
+    const cartSubtotalText = document.getElementById("cartSubtotalText");
+    const cartDrawer = document.getElementById("cartDrawer");
+    const quickViewModal = document.getElementById("quickViewModal");
+    const checkoutModal = document.getElementById("checkoutModal");
+    const confirmationModal = document.getElementById("confirmationModal");
+    const globalBackdrop = document.getElementById("globalBackdrop");
+    const toastEl = document.getElementById("toast");
+
+    document.getElementById("yearSpan").textContent = new Date().getFullYear();
+
+    /* ==========================================================================
+       PRODUCT GRID & FILTERING
+       ========================================================================== */
+    function renderProducts(filter = "All") {
+      const filtered = PRODUCTS.filter(p => {
+        if (filter === "All") return true;
+        if (filter === "NEW") return p.tag === "NEW";
+        return p.category === filter;
+      });
+
+      productGrid.innerHTML = filtered.map(product => `
+        <article class="product-card">
+          <div class="card-media" onclick="openQuickView('${product.id}')">
+            <span class="tag-badge ${product.tag === 'NEW' ? 'tag-new' : 'tag-sale'}">${product.tag}</span>
+            <img src="${product.image}" alt="${product.name}" loading="lazy" />
+            <span class="quickview-pill">Quick View</span>
+          </div>
+          <div class="card-body">
+            <span class="card-category">${product.category}</span>
+            <h3 class="card-title" onclick="openQuickView('${product.id}')">${product.name}</h3>
+            <div class="card-price-row">
+              <span class="price-current">₹${product.price}</span>
+              <span class="price-old">₹${product.oldPrice}</span>
+            </div>
+          </div>
+          <div class="card-actions">
+            <button type="button" class="btn-card-add" onclick="addToCart('${product.id}', 'L')">
+              + Add to Bag (L)
+            </button>
+          </div>
+        </article>
+      `).join("");
+    }
+
+    // Category Chip Clicks
+    document.querySelectorAll(".chip").forEach(chip => {
+      chip.addEventListener("click", () => {
+        document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+        chip.classList.add("active");
+        activeCategory = chip.dataset.category;
+        renderProducts(activeCategory);
+      });
+    });
+
+    window.filterByNav = function(tag) {
+      document.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+      renderProducts(tag);
+    };
+
+    /* ==========================================================================
+       QUICK VIEW MODAL
+       ========================================================================== */
+    window.openQuickView = function(productId) {
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+      qvSelectedSize = "L";
+
+      const qvBody = document.getElementById("qvBody");
+      document.getElementById("qvCategory").textContent = `// ${product.category}`;
+
+      qvBody.innerHTML = `
+        <div class="qv-img">
+          <img src="${product.image}" alt="${product.name}" />
+        </div>
+        <div>
+          <span class="tag-badge ${product.tag === 'NEW' ? 'tag-new' : 'tag-sale'}" style="position:static; display:inline-block; margin-bottom:0.5rem;">
+            ${product.tag}
+          </span>
+          <h2 id="qvTitle" style="font-family:var(--font-display); font-weight:800; font-size:clamp(1.3rem, 3vw, 1.85rem); text-transform:uppercase; margin-bottom:0.45rem;">
+            ${product.name}
+          </h2>
+          <div style="display:flex; align-items:baseline; gap:0.6rem; margin-bottom:0.85rem;">
+            <span class="price-current" style="font-size:1.4rem;">₹${product.price}</span>
+            <span class="price-old" style="font-size:0.9rem;">₹${product.oldPrice}</span>
+          </div>
+          <p style="color:var(--text-secondary); font-size:0.92rem; margin-bottom:1.15rem;">
+            ${product.description}
+          </p>
+
+          <div>
+            <span style="font-family:var(--font-mono); font-size:0.78rem; font-weight:700; text-transform:uppercase;">
+              Select Size:
+            </span>
+            <div class="size-selector" id="qvSizeList">
+              ${SIZES.map(s => `
+                <button type="button" class="size-btn ${s === qvSelectedSize ? 'selected' : ''}" onclick="selectQvSize('${s}')">
+                  ${s}
+                </button>
+              `).join("")}
+            </div>
+          </div>
+
+          <button type="button" class="btn-primary" style="width:100%;" onclick="addFromQuickView('${product.id}')">
+            🛒 Add to Cart
+          </button>
+        </div>
+      `;
+
+      closeAllLayers();
+      quickViewModal.classList.add("open");
+      globalBackdrop.classList.add("active");
+    };
+
+    window.selectQvSize = function(size) {
+      qvSelectedSize = size;
+      document.querySelectorAll("#qvSizeList .size-btn").forEach(btn => {
+        btn.classList.toggle("selected", btn.textContent.trim() === size);
+      });
+    };
+
+    window.addFromQuickView = function(productId) {
+      addToCart(productId, qvSelectedSize);
+      closeAllLayers();
+    };
+
+    /* ==========================================================================
+       CART DRAWER & LOCALSTORAGE PERSISTENCE
+       ========================================================================== */
+    window.addToCart = function(productId, size = "L") {
+      const product = PRODUCTS.find(p => p.id === productId);
+      if (!product) return;
+
+      const cartItemId = `${productId}_${size}`;
+      const existing = cart.find(item => item.cartItemId === cartItemId);
+
+      if (existing) {
+        existing.qty += 1;
+      } else {
+        cart.push({
+          cartItemId,
+          id: product.id,
+          name: product.name,
+          price: product.price,
+          image: product.image,
+          size,
+          qty: 1
+        });
+      }
+
+      saveAndRenderCart();
+      showToast(`⚡ Added ${product.name} (${size}) to cart!`);
+    };
+
+    window.updateCartQty = function(cartItemId, delta) {
+      const idx = cart.findIndex(item => item.cartItemId === cartItemId);
+      if (idx === -1) return;
+
+      cart[idx].qty += delta;
+      if (cart[idx].qty <= 0) {
+        cart.splice(idx, 1);
+      }
+      saveAndRenderCart();
+    };
+
+    window.removeCartItem = function(cartItemId) {
+      cart = cart.filter(item => item.cartItemId !== cartItemId);
+      saveAndRenderCart();
+    };
+
+    function getCartSubtotal() {
+      return cart.reduce((total, item) => total + item.price * item.qty, 0);
+    }
+
+    function saveAndRenderCart() {
+      localStorage.setItem("kshavi_cart_v1", JSON.stringify(cart));
+      const totalItems = cart.reduce((sum, item) => sum + item.qty, 0);
+      cartCountBadge.textContent = totalItems;
+
+      const subtotal = getCartSubtotal();
+      cartSubtotalText.textContent = `₹${subtotal}`;
+
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = `
+          <div style="text-align:center; padding:3rem 1rem; color:var(--text-secondary);">
+            <div style="font-size:2.75rem; margin-bottom:0.65rem;">🛒</div>
+            <p style="font-family:var(--font-display); font-weight:800; font-size:1.15rem; color:var(--ink); text-transform:uppercase;">Your Bag is Empty</p>
+            <p style="font-size:0.85rem; margin-top:0.3rem;">Add some heavyweight streetwear drops to get started.</p>
+          </div>
+        `;
+        return;
+      }
+
+      cartItemsContainer.innerHTML = cart.map(item => `
+        <div class="cart-item">
+          <img src="${item.image}" alt="${item.name}" />
+          <div class="cart-item-meta">
+            <h4>${item.name}</h4>
+            <div class="cart-item-size">Size: ${item.size} • ₹${item.price * item.qty}</div>
+            <div class="cart-controls-row">
+              <div class="qty-box">
+                <button type="button" class="qty-btn" onclick="updateCartQty('${item.cartItemId}', -1)" aria-label="Decrease quantity">−</button>
+                <span class="qty-val">${item.qty}</span>
+                <button type="button" class="qty-btn" onclick="updateCartQty('${item.cartItemId}', 1)" aria-label="Increase quantity">+</button>
+              </div>
+              <button type="button" class="remove-btn" onclick="removeCartItem('${item.cartItemId}')">Remove</button>
+            </div>
+          </div>
+        </div>
+      `).join("");
+    }
+
+    /* ==========================================================================
+       CHECKOUT FLOW & WHATSAPP REDIRECT
+       ========================================================================== */
+    function openCheckoutModal() {
+      if (cart.length === 0) {
+        showToast("⚠️ Your cart is empty!");
+        return;
+      }
+      closeAllLayers();
+      renderCheckoutSummary();
+      checkoutModal.classList.add("open");
+      globalBackdrop.classList.add("active");
+    }
+
+    function renderCheckoutSummary() {
+      const listEl = document.getElementById("checkoutItemsList");
+      listEl.innerHTML = cart.map((item, idx) => `
+        <div class="checkout-item-row">
+          <div style="flex:1; min-width:130px;">
+            <div style="font-weight:700; font-size:0.88rem;">${idx + 1}. ${item.name}</div>
+            <div style="font-family:var(--font-mono); font-size:0.75rem; color:var(--text-secondary);">
+              Qty: ${item.qty} × ₹${item.price} = <strong style="color:var(--ink);">₹${item.price * item.qty}</strong>
+            </div>
+          </div>
+          <div style="display:flex; align-items:center; gap:0.35rem;">
+            <label style="font-family:var(--font-mono); font-size:0.72rem; font-weight:700;" for="chkSize_${idx}">Size:</label>
+            <select id="chkSize_${idx}" class="checkout-size-select" onchange="updateCheckoutItemSize(${idx}, this.value)">
+              ${SIZES.map(s => `<option value="${s}" ${s === item.size ? 'selected' : ''}>${s}</option>`).join("")}
+            </select>
+          </div>
+        </div>
+      `).join("");
+
+      document.getElementById("checkoutTotalAmount").textContent = `₹${getCartSubtotal()}`;
+    }
+
+    // Allow editing size per item directly inside checkout
+    window.updateCheckoutItemSize = function(index, newSize) {
+      if (!cart[index]) return;
+      cart[index].size = newSize;
+      cart[index].cartItemId = `${cart[index].id}_${newSize}`;
+      saveAndRenderCart();
+      renderCheckoutSummary();
+    };
+
+    // Validate & Submit WhatsApp Order
+    document.getElementById("checkoutForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const nameInput = document.getElementById("custName");
+      const phoneInput = document.getElementById("custPhone");
+      const addressInput = document.getElementById("custAddress");
+
+      const name = nameInput.value.trim();
+      const phoneClean = phoneInput.value.replace(/\D/g, "");
+      const address = addressInput.value.trim();
+
+      let isValid = true;
+
+      if (name.length < 2) {
+        nameInput.classList.add("invalid");
+        document.getElementById("errName").classList.add("visible");
+        isValid = false;
+      } else {
+        nameInput.classList.remove("invalid");
+        document.getElementById("errName").classList.remove("visible");
+      }
+
+      if (!/^\d{10}$/.test(phoneClean)) {
+        phoneInput.classList.add("invalid");
+        document.getElementById("errPhone").classList.add("visible");
+        isValid = false;
+      } else {
+        phoneInput.classList.remove("invalid");
+        document.getElementById("errPhone").classList.remove("visible");
+      }
+
+      if (address.length < 8) {
+        addressInput.classList.add("invalid");
+        document.getElementById("errAddress").classList.add("visible");
+        isValid = false;
+      } else {
+        addressInput.classList.remove("invalid");
+        document.getElementById("errAddress").classList.remove("visible");
+      }
+
+      if (!isValid) return;
+
+      const total = getCartSubtotal();
+      const itemLines = cart.map((item, idx) =>
+        `${idx + 1}. ${item.name} | Size: ${item.size} | Qty: ${item.qty} | ₹${item.price * item.qty}`
+      ).join("\n");
+
+      const message =
+        `🛍️ New Order - Kshavi Clothing\n` +
+        `Name: ${name}\n` +
+        `Phone: ${phoneClean}\n` +
+        `Address: ${address}\n` +
+        `Items:\n` +
+        `${itemLines}\n` +
+        `Total: ₹${total}`;
+
+      const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+      window.open(waUrl, "_blank", "noopener,noreferrer");
+
+      cart = [];
+      saveAndRenderCart();
+      e.target.reset();
+      closeAllLayers();
+      confirmationModal.classList.add("open");
+      globalBackdrop.classList.add("active");
+    });
+
+    /* ==========================================================================
+       UI CONTROLS (DRAWERS, MODALS, MOBILE MENU, TOAST)
+       ========================================================================== */
+    function closeAllLayers() {
+      cartDrawer.classList.remove("open");
+      quickViewModal.classList.remove("open");
+      checkoutModal.classList.remove("open");
+      confirmationModal.classList.remove("open");
+      globalBackdrop.classList.remove("active");
+    }
+
+    document.getElementById("openCartBtn").addEventListener("click", () => {
+      closeAllLayers();
+      cartDrawer.classList.add("open");
+      globalBackdrop.classList.add("active");
+    });
+
+    document.getElementById("closeCartBtn").addEventListener("click", closeAllLayers);
+    document.getElementById("closeQvBtn").addEventListener("click", closeAllLayers);
+    document.getElementById("closeCheckoutBtn").addEventListener("click", closeAllLayers);
+    document.getElementById("closeConfirmBtn").addEventListener("click", closeAllLayers);
+    document.getElementById("proceedCheckoutBtn").addEventListener("click", openCheckoutModal);
+    globalBackdrop.addEventListener("click", closeAllLayers);
+
+    // Mobile Hamburger Menu
+    const hamburgerBtn = document.getElementById("hamburgerBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    hamburgerBtn.addEventListener("click", () => {
+      const isOpen = mobileMenu.classList.toggle("open");
+      hamburgerBtn.setAttribute("aria-expanded", String(isOpen));
+      hamburgerBtn.textContent = isOpen ? "✕" : "☰";
+    });
+
+    document.querySelectorAll(".mobile-link").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("open");
+        hamburgerBtn.setAttribute("aria-expanded", "false");
+        hamburgerBtn.textContent = "☰";
+      });
+    });
+
+    // Toast Helper
+    let toastTimer;
+    function showToast(msg) {
+      toastEl.textContent = msg;
+      toastEl.classList.add("show");
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => toastEl.classList.remove("show"), 2500);
+    }
+
+    // Initialize Storefront
+    renderProducts();
+    saveAndRenderCart();
+  </script>
+</body>
+</html>
